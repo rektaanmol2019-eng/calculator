@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator - By Anmol Rekta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-header">
+                <div class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                </div>
+                <div class="header-controls">
+                    <button class="history-toggle" id="historyToggle" data-tooltip="History">📜</button>
+                    <div class="memory-indicator" id="memoryIndicator">M</div>
+                </div>
+            </div>
+            
+            <div class="calculator-body">
+                <!-- Left Side: Display -->
+                <div class="display-section">
+                    <div class="display">
+                        <div class="error-message" id="errorMessage"></div>
+                        <div class="previous-operand" id="previousOperand"></div>
+                        <div class="current-operand" id="currentOperand">0</div>
+                    </div>
+                    <div class="calculator-footer">
+                        <span class="version">v3.0</span>
+                        <span class="copyright">© 2025 Anmol Rekta</span>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Buttons -->
+                <div class="buttons-section">
+                    <div class="buttons">
+                        <!-- Memory Functions Row -->
+                        <button class="btn memory-btn glow-effect" id="memoryClear" data-tooltip="Memory Clear">MC</button>
+                        <button class="btn memory-btn glow-effect" id="memoryRecall" data-tooltip="Memory Recall">MR</button>
+                        <button class="btn memory-btn glow-effect" id="memoryAdd" data-tooltip="Memory Add">M+</button>
+                        <button class="btn memory-btn glow-effect" id="memorySubtract" data-tooltip="Memory Subtract">M−</button>
+                        
+                        <!-- Function Row -->
+                        <button class="btn function-btn" id="clear">AC</button>
+                        <button class="btn function-btn" id="backspace">⌫</button>
+                        <button class="btn function-btn" id="percentage">%</button>
+                        <button class="btn operator-btn" id="divide">÷</button>
+                        
+                        <!-- Number Rows -->
+                        <button class="btn number-btn" id="seven">7</button>
+                        <button class="btn number-btn" id="eight">8</button>
+                        <button class="btn number-btn" id="nine">9</button>
+                        <button class="btn operator-btn" id="multiply">×</button>
+                        
+                        <button class="btn number-btn" id="four">4</button>
+                        <button class="btn number-btn" id="five">5</button>
+                        <button class="btn number-btn" id="six">6</button>
+                        <button class="btn operator-btn" id="subtract">−</button>
+                        
+                        <button class="btn number-btn" id="one">1</button>
+                        <button class="btn number-btn" id="two">2</button>
+                        <button class="btn number-btn" id="three">3</button>
+                        <button class="btn operator-btn" id="add">+</button>
+                        
+                        <!-- Bottom Row -->
+                        <button class="btn special-btn" id="squareRoot" data-tooltip="Square Root">√</button>
+                        <button class="btn number-btn zero-btn" id="zero">0</button>
+                        <button class="btn number-btn" id="decimal">.</button>
+                        <button class="btn equals-btn pulse-effect" id="equals">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- History Panel -->
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button class="clear-history" id="clearHistory">Clear All</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="tests.js"></script>
+</body>
+</html>
